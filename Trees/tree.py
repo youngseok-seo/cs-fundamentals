@@ -1,6 +1,6 @@
 from ds import *
 
-class Tree:
+class tree:
     def __init__(self, val):
         self.val = val
         self.children = []
@@ -37,6 +37,6 @@ y.addChild(z)
 a = tree(4)
 x.addChild(a)
 
-breadthTraversal(x)
+x.breadthTraversal()
 print('-')
-depthTraversal(x)
+x.depthTraversal()
