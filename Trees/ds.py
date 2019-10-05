@@ -29,15 +29,9 @@ class stack:
         self.length -= 1
         return y
 
-class tree:
-    def __init__(self, val):
-        self.val = val
-        self.children = []
-    
-    def addChild(self, child):
-        self.children += [child]
-        return True
         
+
+
 
 
 
