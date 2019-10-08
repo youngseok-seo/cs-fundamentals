@@ -29,6 +29,9 @@ class minHeap:
             if self.length > 3:
                 self.heapify(parent)
 
+    def removeElement(self):
+        
+
 
 x = minHeap()
 x.addElement(1)
