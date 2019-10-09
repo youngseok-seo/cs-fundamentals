@@ -12,5 +12,5 @@ def bubbLeSort(L: list) -> list:
 
     return L
             
-x = [4, 3, 5, 12, 9, 2]
+x = [4, 3, 5, 12, 3, 2]
 print(bubbLeSort(x))
