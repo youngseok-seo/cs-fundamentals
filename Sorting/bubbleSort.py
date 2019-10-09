@@ -1,4 +1,4 @@
-def bubbLeSort(L: list) -> list:
+def bubbleSort(L: list) -> list:
     while True:
         swapped = False
         for j in range(len(L) - 1):
@@ -13,4 +13,4 @@ def bubbLeSort(L: list) -> list:
     return L
             
 x = [4, 3, 5, 12, 3, 2]
-print(bubbLeSort(x))
+print(bubbleSort(x))
