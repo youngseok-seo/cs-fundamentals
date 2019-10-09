@@ -10,7 +10,7 @@ def quickSort(L: list, m: int, n: int) -> list:
 
 def partition(L: list, i: int, j: int) -> bool:
     pivot = L[(i + j)//2]
-    while i < j:
+    while i <= j:
         while L[i] < pivot:
             i += 1
         while L[j] > pivot:
