@@ -8,7 +8,6 @@ class minHeap:
         self.store += [val]
         self.length += 1
         if self.length > 1:
-            # print(self.store[self.length - 1])
             self.heapify(self.length - 1)
 
         print(self.store)
@@ -26,7 +25,7 @@ class minHeap:
             self.store[parent] = self.store[idx]
             self.store[idx] = oldParent
 
-            if self.length > 3:
+            if self.length > 3 and parent > 0:
                 self.heapify(parent)
 
         return True
@@ -49,18 +48,22 @@ class minHeap:
         leftChild = (idx * 2) + 1
         rightChild = (idx * 2) + 2
 
-        print(self.store)
-
-        if (self.length - 1) >= leftChild:
+        if (self.length - 1) == leftChild:
             if self.store[idx] > self.store[leftChild]:
                 print("reheapify")
                 oldParent = self.store[idx]
                 self.store[idx] = self.store[leftChild]
                 self.store[leftChild] = oldParent
-            
+
+        elif (self.length - 1) >= rightChild:
+            if self.store[idx] > self.store[leftChild]:
+                print("reheapify")
+                oldParent = self.store[idx]
+                self.store[idx] = self.store[leftChild]
+                self.store[leftChild] = oldParent
+
                 self.reheapify(leftChild)
             
-        elif (self.length - 1) >= rightChild:
             if self.store[idx] > self.store[rightChild]:
                 print("reheapify")
                 oldParent = self.store[idx]
@@ -69,20 +72,22 @@ class minHeap:
 
                 self.reheapify(rightChild)
 
+        print(self.store)
+
         return True
 
-x = minHeap()
-x.addElement(1)
-x.addElement(3)
-x.addElement(5)
-x.addElement(2)
-x.addElement(4)
+# x = minHeap()
+# x.addElement(1)
+# x.addElement(3)
+# x.addElement(5)
+# x.addElement(2)
+# x.addElement(4)
 
-print(x.store)
+# print(x.store)
 
-heapSorted = []
-for i in range(x.length):
-    y = x.removeElement()
-    heapSorted += [y]
+# heapSorted = []
+# for i in range(x.length):
+#     y = x.removeElement()
+#     heapSorted += [y]
 
-print("sorted list: ", heapSorted)
+# print("sorted list: ", heapSorted)
